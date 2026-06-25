@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magia Entre Páginas</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8fbff;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-box{
+    width:50px;
+    height:50px;
+    border:2px dashed #4da6ff;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#4da6ff;
+    font-size:12px;
+}
+
+.logo h2{
+    color:#2d7ff9;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+.menu a:hover{
+    color:#2d7ff9;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 60px;
+    background:linear-gradient(135deg,#e8f4ff,#ffffff);
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:3rem;
+    color:#2d7ff9;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#2d7ff9;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#1565d8;
+}
+
+/* CATALOGO */
+.section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    color:#2d7ff9;
+    font-size:2.2rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#2d7ff9;
+    margin-bottom:15px;
+}
+
+/* BENEFICIOS */
+.benefits{
+    background:#eef6ff;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.benefit{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+/* FORMULARIO */
+.contact-form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contact-form button{
+    border:none;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    background:#2d7ff9;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+/* BOTON WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.menu{
+    display:none;
+}
+
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <div class="logo-box">LOGO</div>
+            <h2>Magia Entre Páginas</h2>
+        </div>
+
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Magia Entre Páginas</h1>
+        <p>
+            Historias que inspiran la imaginación y el aprendizaje de los niños.
+            Descubre cuentos personalizados, educativos y llenos de valores para cada etapa de la infancia.
+        </p>
+
+        <a href="https://wa.me/51967109429" class="btn btn-primary">
+            Solicitar por WhatsApp
+        </a>
+    </div>
+</section>
+
+<section class="section" id="catalogo">
+    <div class="container">
+
+        <div class="title">
+            <h2>Catálogo de Cuentos</h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Aventuras</h3>
+                <p>Historias emocionantes que despiertan la imaginación.</p>
+                <br>
+                <a href="https://wa.me/51967109429" class="btn btn-primary">
+                    Solicitar
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Valores</h3>
+                <p>Cuentos que enseñan respeto, amistad y responsabilidad.</p>
+                <br>
+                <a href="https://wa.me/51967109429" class="btn btn-primary">
+                    Solicitar
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Emociones</h3>
+                <p>Ayudan a comprender y gestionar sentimientos.</p>
+                <br>
+                <a href="https://wa.me/51967109429" class="btn btn-primary">
+                    Solicitar
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Educativos</h3>
+                <p>Aprendizaje divertido mediante historias creativas.</p>
+                <br>
+                <a href="https://wa.me/51967109429" class="btn btn-primary">
+                    Solicitar
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Personalizados</h3>
+                <p>Convierte a tu niño en el protagonista de su propia historia.</p>
+                <br>
+                <a href="https://wa.me/51967109429" class="btn btn-primary">
+                    Solicitar
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section benefits" id="beneficios">
+
+    <div class="container">
+
+        <div class="title">
+            <h2>¿Por qué elegirnos?</h2>
+        </div>
+
+        <div class="benefit-grid">
+
+            <div class="benefit">
+                <h3>📚 Desarrollo Infantil</h3>
+                <p>Fomentamos la lectura y la creatividad.</p>
+            </div>
+
+            <div class="benefit">
+                <h3>✨ Personalización</h3>
+                <p>Cuentos únicos adaptados a cada niño.</p>
+            </div>
+
+            <div class="benefit">
+                <h3>⚡ Entrega Digital</h3>
+                <p>Recibe tus cuentos en PDF de manera inmediata.</p>
+            </div>
+
+            <div class="benefit">
+                <h3>💙 Atención Personalizada</h3>
+                <p>Te acompañamos durante todo el proceso.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="contacto">
+
+    <div class="container">
+
+        <div class="title">
+            <h2>Contáctanos</h2>
+        </div>
+
+        <div class="contact-form">
+
+            <form id="whatsappForm">
+
+                <input type="text" id="nombre" placeholder="Nombre" required>
+
+                <input type="email" id="correo" placeholder="Correo electrónico" required>
+
+                <input type="tel" id="telefono" placeholder="Teléfono" required>
+
+                <input type="text" id="edad" placeholder="Edad del niño">
+
+                <textarea id="mensaje" rows="5" placeholder="Mensaje"></textarea>
+
+                <button class="btn btn-primary" type="submit">
+                    Enviar por WhatsApp
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>Magia Entre Páginas</h3>
+
+    <p>Venta de cuentos personalizados en PDF.</p>
+
+    <p>Email: preteolgajhuly@gmil.com</p>
+
+    <p>WhatsApp: 967109429</p>
+
+    <p>
+        Facebook:
+        <a href="https://www.facebook.com" target="_blank">
+            Visitar página
+        </a>
+    </p>
+
+    <br>
+
+    <p>© 2026 Magia Entre Páginas - Todos los derechos reservados.</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/51967109429" target="_blank">
+💬
+</a>
+
+<script>
+
+document.getElementById("whatsappForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let nombre=document.getElementById("nombre").value;
+let correo=document.getElementById("correo").value;
+let telefono=document.getElementById("telefono").value;
+let edad=document.getElementById("edad").value;
+let mensaje=document.getElementById("mensaje").value;
+
+let texto=
+`Hola, deseo información sobre los cuentos.
+
+Nombre: ${nombre}
+Correo: ${correo}
+Teléfono: ${telefono}
+Edad del niño: ${edad}
+
+Mensaje:
+${mensaje}`;
+
+let url="https://wa.me/51967109429?text="+encodeURIComponent(texto);
+
+window.open(url,"_blank");
+
+});
+
+</script>
+
+</body>
+</html>
